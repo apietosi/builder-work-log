@@ -141,7 +141,7 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8">
 <a href="{{url_for('index', billed='No')}}">To bill</a>
 <a href="{{url_for('stats')}}">Stats</a>
 <a href="{{url_for('export_csv')}}">Export</a>
-</nav></header><main>{{body}}</main>
+</nav></header><main>{{body|safe}}</main>
 {% if show_fab %}<a class="fab" href="{{url_for('new_job')}}">+ Log a job</a>{% endif %}
 </body></html>"""
 
